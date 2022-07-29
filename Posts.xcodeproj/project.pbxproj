@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF0AFB4A289415B1006CE802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB49289415B1006CE802 /* AppDelegate.swift */; };
 		CF0AFB4C289415B1006CE802 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB4B289415B1006CE802 /* SceneDelegate.swift */; };
-		CF0AFB4E289415B1006CE802 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB4D289415B1006CE802 /* ViewController.swift */; };
+		CF0AFB4E289415B1006CE802 /* ListPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB4D289415B1006CE802 /* ListPostsViewController.swift */; };
 		CF0AFB51289415B1006CE802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB4F289415B1006CE802 /* Main.storyboard */; };
 		CF0AFB53289415B2006CE802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB52289415B2006CE802 /* Assets.xcassets */; };
 		CF0AFB56289415B2006CE802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB54289415B2006CE802 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		CF0AFB46289415B1006CE802 /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0AFB49289415B1006CE802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF0AFB4B289415B1006CE802 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF0AFB4D289415B1006CE802 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF0AFB4D289415B1006CE802 /* ListPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostsViewController.swift; sourceTree = "<group>"; };
 		CF0AFB50289415B1006CE802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF0AFB52289415B2006CE802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF0AFB55289415B2006CE802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		CF0AFB48289415B1006CE802 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				CF0AFB5F2894167C006CE802 /* Shared */,
+				CF0AFB5E28941672006CE802 /* Data */,
+				CF0AFB5D2894163C006CE802 /* Views */,
 				CF0AFB49289415B1006CE802 /* AppDelegate.swift */,
 				CF0AFB4B289415B1006CE802 /* SceneDelegate.swift */,
-				CF0AFB4D289415B1006CE802 /* ViewController.swift */,
 				CF0AFB4F289415B1006CE802 /* Main.storyboard */,
 				CF0AFB52289415B2006CE802 /* Assets.xcassets */,
 				CF0AFB54289415B2006CE802 /* LaunchScreen.storyboard */,
 				CF0AFB57289415B2006CE802 /* Info.plist */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		CF0AFB5D2894163C006CE802 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AFB60289416AF006CE802 /* List Posts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF0AFB5E28941672006CE802 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CF0AFB5F2894167C006CE802 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CF0AFB60289416AF006CE802 /* List Posts */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AFB4D289415B1006CE802 /* ListPostsViewController.swift */,
+			);
+			path = "List Posts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF0AFB4E289415B1006CE802 /* ViewController.swift in Sources */,
+				CF0AFB4E289415B1006CE802 /* ListPostsViewController.swift in Sources */,
 				CF0AFB4A289415B1006CE802 /* AppDelegate.swift in Sources */,
 				CF0AFB4C289415B1006CE802 /* SceneDelegate.swift in Sources */,
 			);
