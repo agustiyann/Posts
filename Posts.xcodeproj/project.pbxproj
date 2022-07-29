@@ -13,6 +13,11 @@
 		CF0AFB51289415B1006CE802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB4F289415B1006CE802 /* Main.storyboard */; };
 		CF0AFB53289415B2006CE802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB52289415B2006CE802 /* Assets.xcassets */; };
 		CF0AFB56289415B2006CE802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB54289415B2006CE802 /* LaunchScreen.storyboard */; };
+		CF0AFB6428942175006CE802 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB6328942175006CE802 /* PostModel.swift */; };
+		CF0AFB672894222F006CE802 /* PostsNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB662894222F006CE802 /* PostsNetworkProvider.swift */; };
+		CF0AFB6A289422AB006CE802 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB69289422AB006CE802 /* NetworkResult.swift */; };
+		CF0AFB6C28942550006CE802 /* ListPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB6B28942550006CE802 /* ListPostsViewModel.swift */; };
+		CF0AFB6E2894403E006CE802 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB6D2894403E006CE802 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		CF0AFB52289415B2006CE802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF0AFB55289415B2006CE802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF0AFB57289415B2006CE802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0AFB6328942175006CE802 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		CF0AFB662894222F006CE802 /* PostsNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkProvider.swift; sourceTree = "<group>"; };
+		CF0AFB69289422AB006CE802 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		CF0AFB6B28942550006CE802 /* ListPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostsViewModel.swift; sourceTree = "<group>"; };
+		CF0AFB6D2894403E006CE802 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		CF0AFB5E28941672006CE802 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CF0AFB612894212B006CE802 /* Remote */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -87,6 +98,7 @@
 		CF0AFB5F2894167C006CE802 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CF0AFB682894229A006CE802 /* Helper */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -95,8 +107,35 @@
 			isa = PBXGroup;
 			children = (
 				CF0AFB4D289415B1006CE802 /* ListPostsViewController.swift */,
+				CF0AFB6B28942550006CE802 /* ListPostsViewModel.swift */,
+				CF0AFB6D2894403E006CE802 /* PostTableViewCell.swift */,
 			);
 			path = "List Posts";
+			sourceTree = "<group>";
+		};
+		CF0AFB612894212B006CE802 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AFB622894212F006CE802 /* Model */,
+				CF0AFB662894222F006CE802 /* PostsNetworkProvider.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		CF0AFB622894212F006CE802 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AFB6328942175006CE802 /* PostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF0AFB682894229A006CE802 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AFB69289422AB006CE802 /* NetworkResult.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +210,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF0AFB4E289415B1006CE802 /* ListPostsViewController.swift in Sources */,
+				CF0AFB6C28942550006CE802 /* ListPostsViewModel.swift in Sources */,
+				CF0AFB672894222F006CE802 /* PostsNetworkProvider.swift in Sources */,
+				CF0AFB6E2894403E006CE802 /* PostTableViewCell.swift in Sources */,
+				CF0AFB6428942175006CE802 /* PostModel.swift in Sources */,
+				CF0AFB6A289422AB006CE802 /* NetworkResult.swift in Sources */,
 				CF0AFB4A289415B1006CE802 /* AppDelegate.swift in Sources */,
 				CF0AFB4C289415B1006CE802 /* SceneDelegate.swift in Sources */,
 			);

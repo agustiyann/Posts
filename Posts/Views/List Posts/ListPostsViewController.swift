@@ -10,11 +10,14 @@ import UIKit
 class ListPostsViewController: UIViewController {
 
     private let tableViewPosts: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        let tableView = UITableView()
+        tableView.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-
+    
+    private let viewModel: ListPostsViewModel = ListPostsViewModel(useCase: PostsUseCase())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +26,23 @@ class ListPostsViewController: UIViewController {
         
         tableViewPosts.delegate = self
         tableViewPosts.dataSource = self
-        tableViewPosts.frame = view.bounds
+        tableViewPosts.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableViewPosts.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableViewPosts.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableViewPosts.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        bindViewModel()
+        viewModel.didLoad()
+    }
+    
+    private func bindViewModel() {
+        viewModel.didReceiveData = { [weak self] in
+            self?.tableViewPosts.reloadData()
+        }
+        
+        viewModel.didReceiveError = { error in
+            print(error)
+        }
     }
 
 }
@@ -32,12 +51,14 @@ class ListPostsViewController: UIViewController {
 
 extension ListPostsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        viewModel.listPosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewPosts.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Number \(indexPath.row)"
+        let cell = tableViewPosts.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
+        let data = viewModel.listPosts[indexPath.row]
+        cell.titlePostLabel.text = "\(data.title)"
+        cell.bodyLabel.text = "\(data.body)"
         return cell
     }
 }
