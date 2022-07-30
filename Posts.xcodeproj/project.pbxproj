@@ -28,6 +28,7 @@
 		CF572FF72895312300831F91 /* DetailPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF62895312300831F91 /* DetailPostViewModel.swift */; };
 		CF572FF92895519400831F91 /* DetailPostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF82895519400831F91 /* DetailPostContent.swift */; };
 		CF572FFB2895533300831F91 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FFA2895533300831F91 /* CommentTableViewCell.swift */; };
+		CF57300728958E6500831F91 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57300628958E6400831F91 /* DetailUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		CF572FF62895312300831F91 /* DetailPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewModel.swift; sourceTree = "<group>"; };
 		CF572FF82895519400831F91 /* DetailPostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostContent.swift; sourceTree = "<group>"; };
 		CF572FFA2895533300831F91 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		CF57300628958E6400831F91 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				CF0AFB60289416AF006CE802 /* List Posts */,
 				CF572FEF2894F4A200831F91 /* Detail Post */,
+				CF57300528958E2900831F91 /* Detail User */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,14 @@
 				CF572FFA2895533300831F91 /* CommentTableViewCell.swift */,
 			);
 			path = "Detail Post";
+			sourceTree = "<group>";
+		};
+		CF57300528958E2900831F91 /* Detail User */ = {
+			isa = PBXGroup;
+			children = (
+				CF57300628958E6400831F91 /* DetailUserViewController.swift */,
+			);
+			path = "Detail User";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				CF572FF92895519400831F91 /* DetailPostContent.swift in Sources */,
 				CF0AFB7A28946307006CE802 /* UITableView+Ext.swift in Sources */,
 				CF572FF328952F6500831F91 /* CommentModel.swift in Sources */,
+				CF57300728958E6500831F91 /* DetailUserViewController.swift in Sources */,
 				CF572FF12894F4F400831F91 /* DetailPostViewController.swift in Sources */,
 				CF0AFB72289450E7006CE802 /* Constants.swift in Sources */,
 				CF0AFB6A289422AB006CE802 /* NetworkResult.swift in Sources */,

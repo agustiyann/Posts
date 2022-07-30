@@ -74,10 +74,10 @@ extension DetailPostViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: DetailPostContent.identifier) as? DetailPostContent
         header?.configure(
-            title: post?.title ?? "",
-            name: user?.name ?? "",
-            body: post?.body ?? "",
-            comments: viewModel.listComments.count)
+            user: user!,
+            post: post!,
+            commentsCount: viewModel.listComments.count,
+            navController: navigationController!)
         return header
     }
 }

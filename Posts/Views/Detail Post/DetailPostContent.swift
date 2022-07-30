@@ -12,6 +12,11 @@ class DetailPostContent: UITableViewHeaderFooterView {
     
     static let identifier = "TableHeader"
     
+    var user: UserModel?
+    weak var navController: UINavigationController?
+    
+    // MARK: - Views
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -71,11 +76,24 @@ class DetailPostContent: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(title: String, name: String, body: String, comments: Int) {
-        titleLabel.text = title
-        nameLabel.text = name
-        bodyLabel.text = body
-        commentsLabel.text = "\(comments) Comments"
+    func configure(user: UserModel, post: PostModel, commentsCount: Int, navController: UINavigationController) {
+        self.user = user
+        self.navController = navController
+        
+        titleLabel.text = post.title
+        nameLabel.text = user.name
+        bodyLabel.text = post.body
+        commentsLabel.text = "\(commentsCount) Comments"
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(namePressed(_:)))
+        nameLabel.isUserInteractionEnabled = true
+        nameLabel.addGestureRecognizer(tap)
+    }
+    
+    @objc private func namePressed(_ sender: UITapGestureRecognizer) {
+        let vc = DetailUserViewController()
+        vc.user = self.user
+        navController?.pushViewController(vc, animated: true)
     }
     
     override func layoutSubviews() {
