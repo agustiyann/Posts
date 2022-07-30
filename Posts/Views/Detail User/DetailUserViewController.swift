@@ -14,9 +14,10 @@ class DetailUserViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "albums")
         tableView.register(DetailUserContent.self, forHeaderFooterViewReuseIdentifier: DetailUserContent.identifier)
+        tableView.register(AlbumTableViewCell.nib(), forCellReuseIdentifier: AlbumTableViewCell.identifier)
         tableView.backgroundColor = .systemBackground
+        tableView.separatorStyle = .none
         return tableView
     }()
 
@@ -57,10 +58,14 @@ extension DetailUserViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "albums", for: indexPath)
-        let album = viewModel.listAlbums[indexPath.row]
-        cell.textLabel?.text = album.title
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: AlbumTableViewCell.identifier, for: indexPath) as? AlbumTableViewCell {
+            if !viewModel.listAlbums.isEmpty {
+                let albumFilter = viewModel.listAlbums.filter { $0.id == indexPath.row + 1}
+                cell.configure(album: albumFilter[0])
+            }
+            return cell
+        }
+        return UITableViewCell()
     }
 }
 
@@ -76,5 +81,9 @@ extension DetailUserViewController: UITableViewDelegate {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: DetailUserContent.identifier) as? DetailUserContent
         header?.configure(user: user!)
         return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }
