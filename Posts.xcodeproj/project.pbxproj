@@ -29,6 +29,10 @@
 		CF572FF92895519400831F91 /* DetailPostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF82895519400831F91 /* DetailPostContent.swift */; };
 		CF572FFB2895533300831F91 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FFA2895533300831F91 /* CommentTableViewCell.swift */; };
 		CF57300728958E6500831F91 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57300628958E6400831F91 /* DetailUserViewController.swift */; };
+		CF5730092895915A00831F91 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5730082895915A00831F91 /* AlbumModel.swift */; };
+		CF57300B289591A400831F91 /* DetailUserNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57300A289591A400831F91 /* DetailUserNetworkProvider.swift */; };
+		CF57300D2895930300831F91 /* DetailUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57300C2895930300831F91 /* DetailUserViewModel.swift */; };
+		CF57300F289597B900831F91 /* DetailUserContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57300E289597B900831F91 /* DetailUserContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		CF572FF82895519400831F91 /* DetailPostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostContent.swift; sourceTree = "<group>"; };
 		CF572FFA2895533300831F91 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		CF57300628958E6400831F91 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		CF5730082895915A00831F91 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		CF57300A289591A400831F91 /* DetailUserNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserNetworkProvider.swift; sourceTree = "<group>"; };
+		CF57300C2895930300831F91 /* DetailUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewModel.swift; sourceTree = "<group>"; };
+		CF57300E289597B900831F91 /* DetailUserContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 				CF0AFB622894212F006CE802 /* Model */,
 				CF0AFB662894222F006CE802 /* PostsNetworkProvider.swift */,
 				CF572FF428952FA600831F91 /* DetailPostNetworkProvider.swift */,
+				CF57300A289591A400831F91 /* DetailUserNetworkProvider.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 				CF0AFB6328942175006CE802 /* PostModel.swift */,
 				CF0AFB6F28944FF7006CE802 /* UserModel.swift */,
 				CF572FF228952F6500831F91 /* CommentModel.swift */,
+				CF5730082895915A00831F91 /* AlbumModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				CF57300628958E6400831F91 /* DetailUserViewController.swift */,
+				CF57300C2895930300831F91 /* DetailUserViewModel.swift */,
+				CF57300E289597B900831F91 /* DetailUserContent.swift */,
 			);
 			path = "Detail User";
 			sourceTree = "<group>";
@@ -268,14 +280,18 @@
 				CF572FFB2895533300831F91 /* CommentTableViewCell.swift in Sources */,
 				CF572FF92895519400831F91 /* DetailPostContent.swift in Sources */,
 				CF0AFB7A28946307006CE802 /* UITableView+Ext.swift in Sources */,
+				CF5730092895915A00831F91 /* AlbumModel.swift in Sources */,
 				CF572FF328952F6500831F91 /* CommentModel.swift in Sources */,
+				CF57300F289597B900831F91 /* DetailUserContent.swift in Sources */,
 				CF57300728958E6500831F91 /* DetailUserViewController.swift in Sources */,
 				CF572FF12894F4F400831F91 /* DetailPostViewController.swift in Sources */,
+				CF57300B289591A400831F91 /* DetailUserNetworkProvider.swift in Sources */,
 				CF0AFB72289450E7006CE802 /* Constants.swift in Sources */,
 				CF0AFB6A289422AB006CE802 /* NetworkResult.swift in Sources */,
 				CF0AFB4A289415B1006CE802 /* AppDelegate.swift in Sources */,
 				CF0AFB7028944FF7006CE802 /* UserModel.swift in Sources */,
 				CF0AFB4C289415B1006CE802 /* SceneDelegate.swift in Sources */,
+				CF57300D2895930300831F91 /* DetailUserViewModel.swift in Sources */,
 				CF0AFB7728945FF8006CE802 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

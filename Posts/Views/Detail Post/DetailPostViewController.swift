@@ -30,12 +30,16 @@ class DetailPostViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(tableView)
-        tableView.frame = view.bounds
         tableView.dataSource = self
         tableView.delegate = self
 
         bindViewModel()
         viewModel.didLoadComments(postId: post?.id ?? 1)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
     }
     
     private func bindViewModel() {
