@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AlbumTableViewCell: UITableViewCell {
     
@@ -75,7 +76,8 @@ extension AlbumTableViewCell: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? PhotoCollectionViewCell {
             let photo = viewModel.listPhotos[indexPath.row]
-            cell.photoImage.load(url: URL(string: photo.thumbnailURL))
+            let url = URL(string: photo.thumbnailURL)
+            cell.photoImage.kf.setImage(with: url)
             return cell
         }
         return UICollectionViewCell()
