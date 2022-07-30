@@ -57,7 +57,7 @@ class ListPostsViewModel {
         useCase.fetchListUsers { listPost in
             users = listPost
             guard let result = users else {
-                self.didReceiveErrorPosts?("Found error in network")
+                self.didReceiveErrorUsers?("Found error in network")
                 return
             }
             switch result {
