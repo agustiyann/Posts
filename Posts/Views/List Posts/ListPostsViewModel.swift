@@ -12,6 +12,7 @@ class ListPostsViewModel {
     // MARK: - Properties
     let useCase: PostsNetworkProvider
     var listPosts: [PostModel] = []
+    var listUsers: [UserModel] = []
     
     // MARK: - Init
     init(useCase: PostsNetworkProvider) {
@@ -19,33 +20,60 @@ class ListPostsViewModel {
     }
     
     // MARK: - Output
-    var didReceiveData: (() -> Void)?
-    var didReceiveError: ((String) -> Void)?
+    var didReceivePosts: (() -> Void)?
+    var didReceiveUsers: (() -> Void)?
+    var didReceiveErrorPosts: ((String) -> Void)?
+    var didReceiveErrorUsers: ((String) -> Void)?
     
     // MARK: - Input
-    func didLoad() {
-        var result: NetworkResult<[PostModel]>?
+    func didLoadPosts() {
+        var posts: NetworkResult<[PostModel]>?
+        var users: NetworkResult<[UserModel]>?
         
         let dispatchGroup = DispatchGroup()
+        
+        /// Task 1 -- Get List Posts
         dispatchGroup.enter()
-        useCase.fetchListPosts { posts in
-            result = posts
+        useCase.fetchListPosts { listPost in
+            posts = listPost
+            guard let result = posts else {
+                self.didReceiveErrorPosts?("Found error in network")
+                return
+            }
+            switch result {
+            case let .success(result):
+                DispatchQueue.main.async {
+                    self.listPosts = result
+                    self.didReceivePosts?()
+                }
+            case let .failed(message):
+                self.didReceiveErrorPosts?(message)
+            }
+            dispatchGroup.leave()
+        }
+        
+        /// Task 2 -- Get List Users
+        dispatchGroup.enter()
+        useCase.fetchListUsers { listPost in
+            users = listPost
+            guard let result = users else {
+                self.didReceiveErrorPosts?("Found error in network")
+                return
+            }
+            switch result {
+            case let .success(result):
+                DispatchQueue.main.async {
+                    self.listUsers = result
+                    self.didReceiveUsers?()
+                }
+            case let .failed(message):
+                self.didReceiveErrorUsers?(message)
+            }
             dispatchGroup.leave()
         }
         
         dispatchGroup.notify(queue: .main) {
-            guard let result = result else {
-                self.didReceiveError?("Found error in network")
-                return
-            }
-            
-            switch result {
-            case let .success(result):
-                self.listPosts = result
-                self.didReceiveData?()
-            case let .failed(message):
-                self.didReceiveError?(message)
-            }
+            print("Done main")
         }
     }
     

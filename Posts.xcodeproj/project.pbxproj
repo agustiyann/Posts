@@ -17,7 +17,11 @@
 		CF0AFB672894222F006CE802 /* PostsNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB662894222F006CE802 /* PostsNetworkProvider.swift */; };
 		CF0AFB6A289422AB006CE802 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB69289422AB006CE802 /* NetworkResult.swift */; };
 		CF0AFB6C28942550006CE802 /* ListPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB6B28942550006CE802 /* ListPostsViewModel.swift */; };
-		CF0AFB6E2894403E006CE802 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB6D2894403E006CE802 /* PostTableViewCell.swift */; };
+		CF0AFB7028944FF7006CE802 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB6F28944FF7006CE802 /* UserModel.swift */; };
+		CF0AFB72289450E7006CE802 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB71289450E6006CE802 /* Constants.swift */; };
+		CF0AFB7728945FF8006CE802 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB7528945FF8006CE802 /* PostTableViewCell.swift */; };
+		CF0AFB7828945FF8006CE802 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB7628945FF8006CE802 /* PostTableViewCell.xib */; };
+		CF0AFB7A28946307006CE802 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB7928946307006CE802 /* UITableView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +37,11 @@
 		CF0AFB662894222F006CE802 /* PostsNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkProvider.swift; sourceTree = "<group>"; };
 		CF0AFB69289422AB006CE802 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		CF0AFB6B28942550006CE802 /* ListPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostsViewModel.swift; sourceTree = "<group>"; };
-		CF0AFB6D2894403E006CE802 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		CF0AFB6F28944FF7006CE802 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CF0AFB71289450E6006CE802 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CF0AFB7528945FF8006CE802 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		CF0AFB7628945FF8006CE802 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CF0AFB7928946307006CE802 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +116,8 @@
 			children = (
 				CF0AFB4D289415B1006CE802 /* ListPostsViewController.swift */,
 				CF0AFB6B28942550006CE802 /* ListPostsViewModel.swift */,
-				CF0AFB6D2894403E006CE802 /* PostTableViewCell.swift */,
+				CF0AFB7528945FF8006CE802 /* PostTableViewCell.swift */,
+				CF0AFB7628945FF8006CE802 /* PostTableViewCell.xib */,
 			);
 			path = "List Posts";
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				CF0AFB6328942175006CE802 /* PostModel.swift */,
+				CF0AFB6F28944FF7006CE802 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				CF0AFB69289422AB006CE802 /* NetworkResult.swift */,
+				CF0AFB71289450E6006CE802 /* Constants.swift */,
+				CF0AFB7928946307006CE802 /* UITableView+Ext.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -199,6 +211,7 @@
 				CF0AFB56289415B2006CE802 /* LaunchScreen.storyboard in Resources */,
 				CF0AFB53289415B2006CE802 /* Assets.xcassets in Resources */,
 				CF0AFB51289415B1006CE802 /* Main.storyboard in Resources */,
+				CF0AFB7828945FF8006CE802 /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,11 +225,14 @@
 				CF0AFB4E289415B1006CE802 /* ListPostsViewController.swift in Sources */,
 				CF0AFB6C28942550006CE802 /* ListPostsViewModel.swift in Sources */,
 				CF0AFB672894222F006CE802 /* PostsNetworkProvider.swift in Sources */,
-				CF0AFB6E2894403E006CE802 /* PostTableViewCell.swift in Sources */,
 				CF0AFB6428942175006CE802 /* PostModel.swift in Sources */,
+				CF0AFB7A28946307006CE802 /* UITableView+Ext.swift in Sources */,
+				CF0AFB72289450E7006CE802 /* Constants.swift in Sources */,
 				CF0AFB6A289422AB006CE802 /* NetworkResult.swift in Sources */,
 				CF0AFB4A289415B1006CE802 /* AppDelegate.swift in Sources */,
+				CF0AFB7028944FF7006CE802 /* UserModel.swift in Sources */,
 				CF0AFB4C289415B1006CE802 /* SceneDelegate.swift in Sources */,
+				CF0AFB7728945FF8006CE802 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

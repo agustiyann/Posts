@@ -11,7 +11,7 @@ class ListPostsViewController: UIViewController {
 
     private let tableViewPosts: UITableView = {
         let tableView = UITableView()
-        tableView.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
+        tableView.registerNIB(with: PostTableViewCell.self)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -32,15 +32,23 @@ class ListPostsViewController: UIViewController {
         tableViewPosts.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         bindViewModel()
-        viewModel.didLoad()
+        viewModel.didLoadPosts()
     }
     
     private func bindViewModel() {
-        viewModel.didReceiveData = { [weak self] in
+        viewModel.didReceivePosts = { [weak self] in
             self?.tableViewPosts.reloadData()
         }
         
-        viewModel.didReceiveError = { error in
+        viewModel.didReceiveUsers = { [weak self] in
+            self?.tableViewPosts.reloadData()
+        }
+        
+        viewModel.didReceiveErrorPosts = { error in
+            print(error)
+        }
+        
+        viewModel.didReceiveErrorUsers = { error in
             print(error)
         }
     }
@@ -55,10 +63,15 @@ extension ListPostsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewPosts.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
+        let cell = tableViewPosts.dequeueCell(with: PostTableViewCell.self)!
         let data = viewModel.listPosts[indexPath.row]
         cell.titlePostLabel.text = "\(data.title)"
         cell.bodyLabel.text = "\(data.body)"
+        if !viewModel.listUsers.isEmpty {
+            let userFilter = viewModel.listUsers.filter { $0.id == data.userID }
+            cell.companyLabel.text = userFilter[0].company.name
+            cell.usernameLabel.text = userFilter[0].name
+        }
         return cell
     }
 }
