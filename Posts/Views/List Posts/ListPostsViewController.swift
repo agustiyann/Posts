@@ -9,7 +9,7 @@ import UIKit
 
 class ListPostsViewController: UIViewController {
 
-    private let tableViewPosts: UITableView = {
+    lazy private var tableViewPosts: UITableView = {
         let tableView = UITableView()
         tableView.registerNIB(with: PostTableViewCell.self)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -81,5 +81,13 @@ extension ListPostsViewController: UITableViewDataSource {
 extension ListPostsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let data = viewModel.listPosts[indexPath.row]
+        let detailVC = DetailPostViewController()
+        detailVC.post = data
+        if !viewModel.listUsers.isEmpty {
+            let userFilter = viewModel.listUsers.filter { $0.id == data.userID }
+            detailVC.user = userFilter[0]
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
 }
