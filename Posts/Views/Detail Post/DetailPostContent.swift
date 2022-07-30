@@ -30,6 +30,7 @@ class DetailPostContent: UITableViewHeaderFooterView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.font = .italicSystemFont(ofSize: 16)
+        label.backgroundColor = .systemBlue
         return label
     }()
     
