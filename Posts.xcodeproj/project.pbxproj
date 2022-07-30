@@ -26,6 +26,8 @@
 		CF572FF328952F6500831F91 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF228952F6500831F91 /* CommentModel.swift */; };
 		CF572FF528952FA600831F91 /* DetailPostNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF428952FA600831F91 /* DetailPostNetworkProvider.swift */; };
 		CF572FF72895312300831F91 /* DetailPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF62895312300831F91 /* DetailPostViewModel.swift */; };
+		CF572FF92895519400831F91 /* DetailPostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF82895519400831F91 /* DetailPostContent.swift */; };
+		CF572FFB2895533300831F91 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FFA2895533300831F91 /* CommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		CF572FF228952F6500831F91 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		CF572FF428952FA600831F91 /* DetailPostNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostNetworkProvider.swift; sourceTree = "<group>"; };
 		CF572FF62895312300831F91 /* DetailPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewModel.swift; sourceTree = "<group>"; };
+		CF572FF82895519400831F91 /* DetailPostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostContent.swift; sourceTree = "<group>"; };
+		CF572FFA2895533300831F91 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 			children = (
 				CF572FF02894F4F400831F91 /* DetailPostViewController.swift */,
 				CF572FF62895312300831F91 /* DetailPostViewModel.swift */,
+				CF572FF82895519400831F91 /* DetailPostContent.swift */,
+				CF572FFA2895533300831F91 /* CommentTableViewCell.swift */,
 			);
 			path = "Detail Post";
 			sourceTree = "<group>";
@@ -248,6 +254,8 @@
 				CF0AFB672894222F006CE802 /* PostsNetworkProvider.swift in Sources */,
 				CF572FF72895312300831F91 /* DetailPostViewModel.swift in Sources */,
 				CF0AFB6428942175006CE802 /* PostModel.swift in Sources */,
+				CF572FFB2895533300831F91 /* CommentTableViewCell.swift in Sources */,
+				CF572FF92895519400831F91 /* DetailPostContent.swift in Sources */,
 				CF0AFB7A28946307006CE802 /* UITableView+Ext.swift in Sources */,
 				CF572FF328952F6500831F91 /* CommentModel.swift in Sources */,
 				CF572FF12894F4F400831F91 /* DetailPostViewController.swift in Sources */,
