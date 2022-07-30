@@ -13,7 +13,7 @@ protocol DetailUserNetworkProvider {
 
 struct DetailUserUseCase: DetailUserNetworkProvider {
     func fetchUserAlbums(userId: Int, completion: @escaping ((NetworkResult<[AlbumModel]>) -> Void)) {
-        let urlString = "\(Cons.baseURL)/albums/\(userId)/photos"
+        let urlString = "\(Cons.baseURL)/users/\(userId)/albums"
         let url = URL(string: urlString)!
         
         URLSession.shared.dataTask(with: url) { data, response, error in
