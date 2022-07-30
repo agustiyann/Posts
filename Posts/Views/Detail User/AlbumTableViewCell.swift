@@ -16,6 +16,8 @@ class AlbumTableViewCell: UITableViewCell {
         return UINib(nibName: "AlbumTableViewCell", bundle: nil)
     }
     var viewModel = AlbumViewModel(useCase: DetailUserUseCase())
+    
+    weak var navController: UINavigationController?
 
     @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -44,7 +46,8 @@ class AlbumTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(album: AlbumModel) {
+    func configure(album: AlbumModel, navController: UINavigationController) {
+        self.navController = navController
         albumTitleLabel.text = album.title
         
         bindViewModel()
@@ -89,5 +92,11 @@ extension AlbumTableViewCell: UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailPhotoViewController()
+        vc.photo = viewModel.listPhotos[indexPath.row]
+        navController?.pushViewController(vc, animated: true)
     }
 }

@@ -61,7 +61,7 @@ extension DetailUserViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AlbumTableViewCell.identifier, for: indexPath) as? AlbumTableViewCell {
             if !viewModel.listAlbums.isEmpty {
                 let albumFilter = viewModel.listAlbums[indexPath.row]
-                cell.configure(album: albumFilter)
+                cell.configure(album: albumFilter, navController: navigationController!)
             }
             return cell
         }
