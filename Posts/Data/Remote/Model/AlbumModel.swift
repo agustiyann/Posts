@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AlbumModel: Codable {
+struct AlbumModel: Codable, Equatable {
     let userID, id: Int
     let title: String
 

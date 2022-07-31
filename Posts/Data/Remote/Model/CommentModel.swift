@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CommentModel: Codable {
+struct CommentModel: Codable, Equatable {
     let postID, id: Int
     let name, email, body: String
 

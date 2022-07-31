@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - UserModel
-struct UserModel: Codable {
+struct UserModel: Codable, Equatable {
     let id: Int
     let name, username, email: String
     let address: Address
@@ -17,17 +17,17 @@ struct UserModel: Codable {
 }
 
 // MARK: - Address
-struct Address: Codable {
+struct Address: Codable, Equatable {
     let street, suite, city, zipcode: String
     let geo: Geo
 }
 
 // MARK: - Geo
-struct Geo: Codable {
+struct Geo: Codable, Equatable {
     let lat, lng: String
 }
 
 // MARK: - Company
-struct Company: Codable {
+struct Company: Codable, Equatable {
     let name, catchPhrase, bs: String
 }
