@@ -28,6 +28,9 @@
 		CF216055289653CD00707067 /* MockDetailPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF216054289653CD00707067 /* MockDetailPostData.swift */; };
 		CF2160572896555800707067 /* MockDetailPostNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2160562896555800707067 /* MockDetailPostNetworkProvider.swift */; };
 		CF2160592896560700707067 /* DetailPostTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2160582896560700707067 /* DetailPostTest.swift */; };
+		CF21605C2896612600707067 /* MockDetailUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21605B2896612600707067 /* MockDetailUserData.swift */; };
+		CF21605E2896625400707067 /* MockDetailUserNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21605D2896625400707067 /* MockDetailUserNetworkProvider.swift */; };
+		CF216060289665D600707067 /* DetailUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21605F289665D600707067 /* DetailUserTest.swift */; };
 		CF572FF12894F4F400831F91 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF02894F4F400831F91 /* DetailPostViewController.swift */; };
 		CF572FF328952F6500831F91 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF228952F6500831F91 /* CommentModel.swift */; };
 		CF572FF528952FA600831F91 /* DetailPostNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF428952FA600831F91 /* DetailPostNetworkProvider.swift */; };
@@ -86,6 +89,9 @@
 		CF216054289653CD00707067 /* MockDetailPostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailPostData.swift; sourceTree = "<group>"; };
 		CF2160562896555800707067 /* MockDetailPostNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailPostNetworkProvider.swift; sourceTree = "<group>"; };
 		CF2160582896560700707067 /* DetailPostTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostTest.swift; sourceTree = "<group>"; };
+		CF21605B2896612600707067 /* MockDetailUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailUserData.swift; sourceTree = "<group>"; };
+		CF21605D2896625400707067 /* MockDetailUserNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailUserNetworkProvider.swift; sourceTree = "<group>"; };
+		CF21605F289665D600707067 /* DetailUserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserTest.swift; sourceTree = "<group>"; };
 		CF572FF02894F4F400831F91 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
 		CF572FF228952F6500831F91 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		CF572FF428952FA600831F91 /* DetailPostNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostNetworkProvider.swift; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 			children = (
 				CF2160522896530300707067 /* List Post */,
 				CF2160532896532C00707067 /* Detail Post */,
+				CF21605A28965E7100707067 /* Detail User */,
 			);
 			path = PostsTests;
 			sourceTree = "<group>";
@@ -260,6 +267,16 @@
 				CF2160582896560700707067 /* DetailPostTest.swift */,
 			);
 			path = "Detail Post";
+			sourceTree = "<group>";
+		};
+		CF21605A28965E7100707067 /* Detail User */ = {
+			isa = PBXGroup;
+			children = (
+				CF21605B2896612600707067 /* MockDetailUserData.swift */,
+				CF21605D2896625400707067 /* MockDetailUserNetworkProvider.swift */,
+				CF21605F289665D600707067 /* DetailUserTest.swift */,
+			);
+			path = "Detail User";
 			sourceTree = "<group>";
 		};
 		CF572FEF2894F4A200831F91 /* Detail Post */ = {
@@ -446,9 +463,12 @@
 				CF216055289653CD00707067 /* MockDetailPostData.swift in Sources */,
 				CF21604F2896393C00707067 /* MockPostData.swift in Sources */,
 				CF21604D289638B800707067 /* ListPostsTest.swift in Sources */,
+				CF216060289665D600707067 /* DetailUserTest.swift in Sources */,
 				CF2160572896555800707067 /* MockDetailPostNetworkProvider.swift in Sources */,
 				CF2160592896560700707067 /* DetailPostTest.swift in Sources */,
 				CF21605128963AD700707067 /* MockPostNetworkProvider.swift in Sources */,
+				CF21605C2896612600707067 /* MockDetailUserData.swift in Sources */,
+				CF21605E2896625400707067 /* MockDetailUserNetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
