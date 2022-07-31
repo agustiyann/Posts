@@ -22,6 +22,12 @@
 		CF0AFB7728945FF8006CE802 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB7528945FF8006CE802 /* PostTableViewCell.swift */; };
 		CF0AFB7828945FF8006CE802 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFB7628945FF8006CE802 /* PostTableViewCell.xib */; };
 		CF0AFB7A28946307006CE802 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AFB7928946307006CE802 /* UITableView+Ext.swift */; };
+		CF21604D289638B800707067 /* ListPostsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21604C289638B800707067 /* ListPostsTest.swift */; };
+		CF21604F2896393C00707067 /* MockPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21604E2896393C00707067 /* MockPostData.swift */; };
+		CF21605128963AD700707067 /* MockPostNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21605028963AD700707067 /* MockPostNetworkProvider.swift */; };
+		CF216055289653CD00707067 /* MockDetailPostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF216054289653CD00707067 /* MockDetailPostData.swift */; };
+		CF2160572896555800707067 /* MockDetailPostNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2160562896555800707067 /* MockDetailPostNetworkProvider.swift */; };
+		CF2160592896560700707067 /* DetailPostTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2160582896560700707067 /* DetailPostTest.swift */; };
 		CF572FF12894F4F400831F91 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF02894F4F400831F91 /* DetailPostViewController.swift */; };
 		CF572FF328952F6500831F91 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF228952F6500831F91 /* CommentModel.swift */; };
 		CF572FF528952FA600831F91 /* DetailPostNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF572FF428952FA600831F91 /* DetailPostNetworkProvider.swift */; };
@@ -45,6 +51,16 @@
 		CF5730252895BE6200831F91 /* DetailPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5730232895BE6200831F91 /* DetailPhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CF2160472896387200707067 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0AFB3E289415B1006CE802 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF0AFB45289415B1006CE802;
+			remoteInfo = Posts;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CF0AFB46289415B1006CE802 /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0AFB49289415B1006CE802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +79,13 @@
 		CF0AFB7528945FF8006CE802 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		CF0AFB7628945FF8006CE802 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		CF0AFB7928946307006CE802 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		CF2160432896387200707067 /* PostsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF21604C289638B800707067 /* ListPostsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostsTest.swift; sourceTree = "<group>"; };
+		CF21604E2896393C00707067 /* MockPostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostData.swift; sourceTree = "<group>"; };
+		CF21605028963AD700707067 /* MockPostNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostNetworkProvider.swift; sourceTree = "<group>"; };
+		CF216054289653CD00707067 /* MockDetailPostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailPostData.swift; sourceTree = "<group>"; };
+		CF2160562896555800707067 /* MockDetailPostNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailPostNetworkProvider.swift; sourceTree = "<group>"; };
+		CF2160582896560700707067 /* DetailPostTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostTest.swift; sourceTree = "<group>"; };
 		CF572FF02894F4F400831F91 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
 		CF572FF228952F6500831F91 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		CF572FF428952FA600831F91 /* DetailPostNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostNetworkProvider.swift; sourceTree = "<group>"; };
@@ -94,6 +117,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF2160402896387200707067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				CF0AFB48289415B1006CE802 /* Posts */,
+				CF2160442896387200707067 /* PostsTests */,
 				CF0AFB47289415B1006CE802 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CF0AFB46289415B1006CE802 /* Posts.app */,
+				CF2160432896387200707067 /* PostsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +233,35 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		CF2160442896387200707067 /* PostsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF2160522896530300707067 /* List Post */,
+				CF2160532896532C00707067 /* Detail Post */,
+			);
+			path = PostsTests;
+			sourceTree = "<group>";
+		};
+		CF2160522896530300707067 /* List Post */ = {
+			isa = PBXGroup;
+			children = (
+				CF21604E2896393C00707067 /* MockPostData.swift */,
+				CF21605028963AD700707067 /* MockPostNetworkProvider.swift */,
+				CF21604C289638B800707067 /* ListPostsTest.swift */,
+			);
+			path = "List Post";
+			sourceTree = "<group>";
+		};
+		CF2160532896532C00707067 /* Detail Post */ = {
+			isa = PBXGroup;
+			children = (
+				CF216054289653CD00707067 /* MockDetailPostData.swift */,
+				CF2160562896555800707067 /* MockDetailPostNetworkProvider.swift */,
+				CF2160582896560700707067 /* DetailPostTest.swift */,
+			);
+			path = "Detail Post";
+			sourceTree = "<group>";
+		};
 		CF572FEF2894F4A200831F91 /* Detail Post */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +320,24 @@
 			productReference = CF0AFB46289415B1006CE802 /* Posts.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CF2160422896387200707067 /* PostsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF2160492896387200707067 /* Build configuration list for PBXNativeTarget "PostsTests" */;
+			buildPhases = (
+				CF21603F2896387200707067 /* Sources */,
+				CF2160402896387200707067 /* Frameworks */,
+				CF2160412896387200707067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF2160482896387200707067 /* PBXTargetDependency */,
+			);
+			name = PostsTests;
+			productName = PostsTests;
+			productReference = CF2160432896387200707067 /* PostsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -271,6 +350,10 @@
 				TargetAttributes = {
 					CF0AFB45289415B1006CE802 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					CF2160422896387200707067 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CF0AFB45289415B1006CE802;
 					};
 				};
 			};
@@ -291,6 +374,7 @@
 			projectRoot = "";
 			targets = (
 				CF0AFB45289415B1006CE802 /* Posts */,
+				CF2160422896387200707067 /* PostsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -307,6 +391,13 @@
 				CF5730192895A78B00831F91 /* PhotoCollectionViewCell.xib in Resources */,
 				CF5730152895A62F00831F91 /* AlbumTableViewCell.xib in Resources */,
 				CF0AFB7828945FF8006CE802 /* PostTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF2160412896387200707067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +439,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF21603F2896387200707067 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF216055289653CD00707067 /* MockDetailPostData.swift in Sources */,
+				CF21604F2896393C00707067 /* MockPostData.swift in Sources */,
+				CF21604D289638B800707067 /* ListPostsTest.swift in Sources */,
+				CF2160572896555800707067 /* MockDetailPostNetworkProvider.swift in Sources */,
+				CF2160592896560700707067 /* DetailPostTest.swift in Sources */,
+				CF21605128963AD700707067 /* MockPostNetworkProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF2160482896387200707067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF0AFB45289415B1006CE802 /* Posts */;
+			targetProxy = CF2160472896387200707067 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CF0AFB4F289415B1006CE802 /* Main.storyboard */ = {
@@ -540,6 +652,42 @@
 			};
 			name = Release;
 		};
+		CF21604A2896387200707067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KRF6V32MMS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.agustiyan.PostsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Posts.app/Posts";
+			};
+			name = Debug;
+		};
+		CF21604B2896387200707067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KRF6V32MMS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.agustiyan.PostsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Posts.app/Posts";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +705,15 @@
 			buildConfigurations = (
 				CF0AFB5B289415B2006CE802 /* Debug */,
 				CF0AFB5C289415B2006CE802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF2160492896387200707067 /* Build configuration list for PBXNativeTarget "PostsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF21604A2896387200707067 /* Debug */,
+				CF21604B2896387200707067 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
