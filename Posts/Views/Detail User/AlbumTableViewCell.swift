@@ -15,7 +15,7 @@ class AlbumTableViewCell: UITableViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "AlbumTableViewCell", bundle: nil)
     }
-    var viewModel = AlbumViewModel(useCase: DetailUserUseCase())
+    let viewModel = AlbumViewModel(useCase: DetailUserUseCase())
     
     weak var navController: UINavigationController?
 

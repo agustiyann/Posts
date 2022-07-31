@@ -10,7 +10,7 @@ import UIKit
 class DetailUserViewController: UIViewController {
     
     var user: UserModel?
-    var viewModel = DetailUserViewModel(useCase: DetailUserUseCase())
+    let viewModel = DetailUserViewModel(useCase: DetailUserUseCase())
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)

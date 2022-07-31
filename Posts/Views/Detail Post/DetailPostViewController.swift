@@ -12,7 +12,7 @@ class DetailPostViewController: UIViewController {
     var post: PostModel?
     var user: UserModel?
     
-    var viewModel = DetailPostViewModel(useCase: DetailPostUseCase())
+    let viewModel = DetailPostViewModel(useCase: DetailPostUseCase())
     
     // MARK: - Views
     

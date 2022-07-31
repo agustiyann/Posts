@@ -10,11 +10,11 @@ import Foundation
 class AlbumViewModel {
     
     // MARK: - Properties
-    let useCase: DetailUserUseCase
+    let useCase: DetailUserNetworkProvider
     var listPhotos = [PhotoModel]()
     
     // MARK: - Init
-    init(useCase: DetailUserUseCase) {
+    init(useCase: DetailUserNetworkProvider) {
         self.useCase = useCase
     }
     

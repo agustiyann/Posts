@@ -10,11 +10,11 @@ import Foundation
 class DetailPostViewModel {
     
     // MARK: - Properties
-    let useCase: DetailPostUseCase
+    let useCase: DetailPostNetworkProvider
     var listComments = [CommentModel]()
     
     // MARK: - Init
-    init(useCase: DetailPostUseCase) {
+    init(useCase: DetailPostNetworkProvider) {
         self.useCase = useCase
     }
     

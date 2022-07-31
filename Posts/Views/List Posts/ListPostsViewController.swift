@@ -16,7 +16,7 @@ class ListPostsViewController: UIViewController {
         return tableView
     }()
     
-    private let viewModel: ListPostsViewModel = ListPostsViewModel(useCase: PostsUseCase())
+    let viewModel: ListPostsViewModel = ListPostsViewModel(useCase: PostsUseCase())
     
     override func viewDidLoad() {
         super.viewDidLoad()
